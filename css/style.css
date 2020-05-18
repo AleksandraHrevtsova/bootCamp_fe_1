@@ -1,0 +1,213 @@
+/* подключаем шрифты */
+@font-face {
+    font-family: "Myraid Pro";
+    src: url(./fonts/MyriadPro-Regular.eot) format("embedded-opentype"),
+        url(./fonts/MyriadPro-Regular.ttf) format("truetype"),
+        url(./fonts/MyriadPro-Regular.woff) format("woff");
+    font-style: normal;
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: "Gotham Pro Bold";
+    src: url(./fonts/GothamPro-Bold.eot) format("embedded-opentype"),
+        url(./fonts/GothamPro-Bold.ttf) format("truetype"),
+        url(./fonts/GothamPro-Bold.woff) format("woff");
+    font-style: normal;
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: "OpenSans";
+    src: url(./fonts/OpenSans-Regular.eot) format("embedded-opentype"),
+        url(./fonts/OpenSans-Regular.ttf) format("truetype"),
+        url(./fonts/OpenSans-Regular.woff) format("woff");
+    font-style: normal;
+    font-weight: bold;
+}
+
+/* прописываем свойства для всех элементов */
+* {
+    /* обнуляем дефолтный маргин тега body */
+    margin: 0;
+    box-sizing: border-box;
+    /* box-sizing: content-box; */
+}
+
+ul {
+    /* обнуляем дефолтную маркировку элементов тега ul */
+    list-style: none;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* задаем границы под мобильные устройства */
+.container {
+    width: 320px;
+    margin: 0 auto;
+}
+
+/* СТИЛИ ХЭДЭРА */
+.header-nav {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+}
+
+.logo,
+.nav_list {
+    padding-bottom: 27px;
+}
+
+.logo {
+    padding-top: 36px;
+    padding-bottom: 29px;
+    text-transform: capitalize;
+    font-family: "Myraid Pro";
+    color: black;
+    font-size: 16px;
+    position: relative;
+}
+
+/* псевдоэлемент перед лого */
+.logo::before {
+    content: "";
+    width: 46px;
+    height: 46px;
+    position: absolute;
+    top: 25%;
+    left: -38%;
+    background-image: url(./images/icon_sofa.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: rgb(247, 223, 8);
+    border-radius: 50%;
+}
+
+.logo span {
+    text-transform: uppercase;
+}
+
+.logo span,
+.nav_list-item a {
+    font-weight: bold;
+}
+
+.nav_list-item {
+    position: relative;
+}
+
+/* псевдоэлемент последнего элемента списка навигации */
+.nav_list-item:last-child::before {
+    content: "";
+    width: 22px;
+    height: 22px;
+    position: absolute;
+    /* top: 22%; */
+    left: -11%;
+    background-image: url(./images/icon_viber.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    /* background-color: yellow; */
+    border-radius: 50%;
+}
+
+/* СТИЛИ СЕКЦИИ 1 */
+.s1 {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: linear-gradient(to top, rgba(8, 8, 8, 0.75), rgba(241, 174, 18, 0.75)), url(./images/s1_back_light.png);
+    /* background-size: cover; */
+    /* height: 420px; */
+    width: 320px;
+    margin: 0 auto;
+}
+
+.s1_title,
+.s1_list {
+    margin: 0 20px;
+    color: white;
+}
+
+.s1_title {
+    padding-top: 68px;
+    font-family: "Gotham Pro";
+    font-size: 36px;
+}
+
+.s1_list {
+    padding-top: 28px;
+    font-family: "OpenSans";
+    font-size: 14px;
+    padding-bottom: 96px;
+    position: relative;
+}
+
+.s1_list::after {
+    content: "\2193";
+    color: yellow;
+    /* transform: rotate(90deg) translate(0px, 25px); */
+    /* width: 14px;
+    height: 14px; */
+    position: absolute;
+    top: 87%;
+    left: 50%;
+    /* background-image: url(./images/icon_star.png); */
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+main span {
+    color: yellow;
+}
+
+.s1_list-item {
+    position: relative;
+    padding-left: 23px;
+    margin-bottom: 15px;
+}
+
+.s1_list-item::before {
+    content: "";
+    width: 14px;
+    height: 14px;
+    position: absolute;
+    top: 7%;
+    left: 1%;
+    background-image: url(./images/icon_star.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    /* background-color: yellow; */
+    /* border-radius: 50%; */
+}
+
+/* СТИЛИ ФУТЕРА */
+footer {
+    /* задаем цвет фона всему футеру */
+    background-color: black;
+}
+
+footer p {
+    /* задаем цвет текста */
+    color: rgb(160, 151, 151);
+    /* задаем шрифт */
+    font-family: "Myriad Pro";
+    /* размер шрифта */
+    font-size: 12px;
+    /* задаем верхний и нижний внутренние отступы */
+    padding: 25px 0;
+    /* центрируем текст */
+    text-align: center;
+}
+
+@media screen and (width: 768px) {
+    .container {
+        width: 768px;
+    }
+}
