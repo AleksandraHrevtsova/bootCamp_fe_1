@@ -57,20 +57,17 @@ a {
     align-items: center;
 }
 
-.logo,
-.nav_list {
-    padding-bottom: 27px;
-}
 
 .logo {
     padding-top: 36px;
     padding-bottom: 29px;
     text-transform: capitalize;
     font-family: "Myraid Pro";
-    color: black;
     font-size: 16px;
     position: relative;
+    color: black;
 }
+
 
 /* псевдоэлемент перед лого */
 .logo::before {
@@ -80,7 +77,7 @@ a {
     position: absolute;
     top: 25%;
     left: -38%;
-    background-image: url(./images/icon_sofa.png);
+    background-image: url(../images/icon_sofa.png);
     background-position: center;
     background-repeat: no-repeat;
     background-color: rgb(247, 223, 8);
@@ -89,6 +86,12 @@ a {
 
 .logo span {
     text-transform: uppercase;
+}
+
+.nav_list {
+    display: flex;
+    flex-flow: column;
+    padding-bottom: 27px;
 }
 
 .logo span,
@@ -106,12 +109,10 @@ a {
     width: 22px;
     height: 22px;
     position: absolute;
-    /* top: 22%; */
-    left: -11%;
-    background-image: url(./images/icon_viber.png);
+    left: -20%;
+    background-image: url(../images/icon_viber.png);
     background-position: center;
     background-repeat: no-repeat;
-    /* background-color: yellow; */
     border-radius: 50%;
 }
 
@@ -122,7 +123,7 @@ a {
     align-items: center;
     background-position: center;
     background-repeat: no-repeat;
-    background-image: linear-gradient(to top, rgba(8, 8, 8, 0.75), rgba(241, 174, 18, 0.75)), url(./images/s1_back_light.png);
+    background-image: linear-gradient(to top, rgba(8, 8, 8, 0.75), rgba(241, 174, 18, 0.75)), url(../images/s1_back_light.png);
     /* background-size: cover; */
     /* height: 420px; */
     width: 320px;
@@ -152,13 +153,9 @@ a {
 .s1_list::after {
     content: "\2193";
     color: yellow;
-    /* transform: rotate(90deg) translate(0px, 25px); */
-    /* width: 14px;
-    height: 14px; */
     position: absolute;
     top: 87%;
     left: 50%;
-    /* background-image: url(./images/icon_star.png); */
     background-position: center;
     background-repeat: no-repeat;
 }
@@ -180,11 +177,9 @@ main span {
     position: absolute;
     top: 7%;
     left: 1%;
-    background-image: url(./images/icon_star.png);
+    background-image: url(../images/icon_star.png);
     background-position: center;
     background-repeat: no-repeat;
-    /* background-color: yellow; */
-    /* border-radius: 50%; */
 }
 
 /* СТИЛИ ФУТЕРА */
@@ -206,8 +201,8 @@ footer p {
     text-align: center;
 }
 
-@media screen and (width: 768px) {
+/* @media screen and (min-width: 768px) {
     .container {
         width: 768px;
     }
-}
+} */
