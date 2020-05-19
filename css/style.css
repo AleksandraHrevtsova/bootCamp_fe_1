@@ -38,9 +38,11 @@ ul {
     /* обнуляем дефолтную маркировку элементов тега ul */
     list-style: none;
     padding: 0;
+    /* text-transform: capitalize; */
 }
 
 a {
+    /* обнуляем дефолтное подчеркивание текста ссылки */
     text-decoration: none;
 }
 
@@ -121,14 +123,23 @@ a {
     display: flex;
     flex-flow: column;
     align-items: center;
-    background-position: center;
-    background-repeat: no-repeat;
     background-image: linear-gradient(to top, rgba(8, 8, 8, 0.75), rgba(241, 174, 18, 0.75)), url(../images/s1_back_light.png);
-    /* background-size: cover; */
+    /* задаем фон с указанием пути к изображению и цвета наложения */
+    /* background: #535353 url(../images/s1_back_pp.png); */
+    /* добавляем формат наложения серого слоя */
+    /* background-blend-mode: soft-light; */
+    /* центрируем изображение */
+    background-position: center;
+    /* указываем запрет на повторение изображения за его пределами */
+    /* background-repeat: no-repeat; */
+    /* или установить размер с заполнением, тогда 
+    изображение будет менять масштаб в зависимости от размера секции */
+    background-size: cover;
     /* height: 420px; */
     width: 320px;
     margin: 0 auto;
 }
+
 
 .s1_title,
 .s1_list {
